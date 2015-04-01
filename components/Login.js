@@ -9,23 +9,24 @@ var React = require('react-native'),
 		View,
 		Text,
 		TextInput,
-		StyleSheet
+		StyleSheet,
+		Component
 	} = React;
 
-var Login = React.createClass({
-	render: function() {
+class Login extends Component {
+	render() {
 		return (
 			<View style={styles.container}>
 				<View style={styles.loginContainer}>
 					<Image source={{uri: 'http://acmd-launch-pad.com/vroozi/vroozi-logo-white.png'}} style={styles.logo} />
 					<TextInput style={styles.input} placeholder='Username' ref='login-username' autoFocus='true' clearButtonMode='while-editing' />
-					<TextInput style={styles.input} placeholder='Password' ref='login-password' clearButtonMode='while-editing' />
+					<TextInput style={styles.input} placeholder='Password' ref='login-password' password={true} secureTextEntry={true} clearButtonMode='while-editing' />
 					<LoginButton/>
 				</View>
 			</View>
 		);
 	}
-});
+}
 
 var styles = StyleSheet.create({
 	container: {

@@ -1,21 +1,22 @@
 'use strict';
 
-var React = require('react-native');
-var {
-    TouchableHighlight,
-    Text,
-    StyleSheet
-} = React;
+var React = require('react-native'),
+    {
+        TouchableHighlight,
+        Text,
+        StyleSheet,
+        Component
+    } = React;
 
-var LoginButton = React.createClass({
-    render: function() {
+class LoginButton extends Component {
+    render() {
         return (
             <TouchableHighlight underlayColor='#c19c00' style={styles.button}>
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableHighlight>
         );
     }
-});
+}
 
 var styles = StyleSheet.create({
     button: {
