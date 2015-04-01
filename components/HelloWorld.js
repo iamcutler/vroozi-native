@@ -1,7 +1,7 @@
 'use strict';
 var React = require('react-native'),
   Login = require('./../components/Login'),
-  PurchaseRequest = require('./../components/PurchaseRequest'),
+  PurchaseRequest = require('./../components/purchase-request/PurchaseRequest'),
   {
     Text,
     View,
